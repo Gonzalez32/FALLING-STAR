@@ -2,6 +2,7 @@
 
 ![Imgur](https://i.imgur.com/o1Q8HdV.png)
 ## Technologies Used:
+![motherofgod] (https://i.pinimg.com/originals/1c/7c/f0/1c7cf0b711f81d8139ed3993000e023c.png)
 __**JavaScript**__- 
 __**HTML**__- 
 __**CSS**__-
