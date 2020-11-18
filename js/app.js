@@ -5,7 +5,7 @@
 
 // first get the element by id and then create an E-L 
 const ball = document.getElementById('ball')
-let interval;
+let control;
 const gameBox = document.getElementById('gamebox')
 let bothKeys = 0
 const currentBlocks = []
@@ -31,11 +31,11 @@ document.addEventListener('keydown', (e) => {
         bothKeys++
         // use keyCode: 37 = ArrowLeft
         if (e.keyCode === 37) {
-            interval = setInterval(left, 1)
+            control = setInterval(left, 1)
         }
         // use keyCode: 39 = ArrowRight
         if (e.keyCode === 39) {
-            interval = setInterval(right, 1)
+            control = setInterval(right, 1)
         }
     }
 })
@@ -58,7 +58,7 @@ function right() {
 
 // add E-L so when keys are not in use or both keys are press in the sametime it stops the ball
 document.addEventListener('keyup', (e) => {
-    clearInterval(interval)
+    clearInterval(control)
     bothKeys=0
 })
 
