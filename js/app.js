@@ -5,10 +5,10 @@
 
 // first get the element by id and then create an E-L 
 const ball = document.getElementById('ball')
-let control;
 const gameBox = document.getElementById('gamebox')
+let control;
 let bothKeys = 0
-const currentBlocks = []
+// const currentBlocks = []
 
 
 // set my Interval for myTimer function for every 1 second.
@@ -61,6 +61,21 @@ document.addEventListener('keyup', (e) => {
     clearInterval(control)
     bothKeys=0
 })
+
+// need to create an element div for the blocks to render on the page. Within the blocks there should be gaps as well
+
+// create an element div for bar and gap
+let bar = document.createElement("div")
+let gap = document.createElement("div")
+// S-A for class and id for bar and gap
+bar.setAttribute('class', 'bar')
+gap.setAttribute('class', 'gap')
+bar.setAttribute('id', 'bar')
+gap.setAttribute('id', 'gap')
+
+gameBox.appendChild(bar)
+gameBox.appendChild(gap)
+
 
 
 
