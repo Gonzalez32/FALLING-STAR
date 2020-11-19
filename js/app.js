@@ -8,17 +8,18 @@ const ball = document.getElementById('ball')
 const gameBox = document.getElementById('gamebox')
 let control;
 let bothKeys = 0
-// const currentBlocks = []
+// keep track of the setInterval function 
+const tracker = 0
 
 
 // set my Interval for myTimer function for every 1 second.
-const timer = setInterval(myTimer, 1000);
+// const timer = setInterval(myTimer, 1000);
 // this is my time fucntion that renders on the page for the user. 
-function myTimer() {
-    let d = new Date()
-    let t = d.toLocaleTimeString()
-    document.getElementById('time').innerHTML = t
-}
+// function myTimer() {
+//     let d = new Date()
+//     let t = d.toLocaleTimeString()
+//     document.getElementById('time').innerHTML = t
+// }
 
 // this allows me to see which key is bring selective with console.log ---just for testing---
 // window.addEventListener('keydown', (e) => {
@@ -48,10 +49,10 @@ function left() {
     }
 }
 
-// within setInterval function right for my right-key set to 475 at the right div-box
+// within setInterval function right for my right-key set to 380 at the right div-box
 function right() {
     let left = parseInt(window.getComputedStyle(ball).getPropertyValue("left"))
-    if (left < 475) {
+    if (left < 380) {
         ball.style.left = left + 2 + 'px'
     }
 }
@@ -62,21 +63,26 @@ document.addEventListener('keyup', (e) => {
     bothKeys=0
 })
 
-// need to create an element div for the blocks to render on the page. Within the blocks there should be gaps as well
+// need to create an element div for the bar to render on the page. Within the bar there should be gaps as well
 
-// create an element div for bar and gap
-let bar = document.createElement("div")
-let gap = document.createElement("div")
-// S-A for class and id for bar and gap
-bar.setAttribute('class', 'bar')
-gap.setAttribute('class', 'gap')
-bar.setAttribute('id', 'bar')
-gap.setAttribute('id', 'gap')
-
-gameBox.appendChild(bar)
-gameBox.appendChild(gap)
-
-
+// S-I function to render bar and gap continuously
+setInterval(function(){
+    // create an element div for bar and gap
+    let bar = document.createElement("div")
+    let gap = document.createElement("div")
+    // S-A for class and id for bar and gap
+    bar.setAttribute('class', 'bar')
+    gap.setAttribute('class', 'gap')
+    bar.setAttribute('id', 'bar' + tracker)
+    gap.setAttribute('id', 'gap' + tracker)
+    // everytime it renders on the page randomly 
+    let random = Math.floor(Math.random() * 360)
+    gap.style.left = random + 'px'
+    // append the bar and gap within the gamebox div 
+    gameBox.appendChild(bar)
+    gameBox.appendChild(gap)
+    tracker++
+},1)
 
 
 
