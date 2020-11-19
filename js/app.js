@@ -10,7 +10,7 @@ let control;
 let bothKeys = 0
 // keeps track setInterval function
 var tracker = 0
-var currentBar = []
+var currentBars = []
 
 // set my Interval for myTimer function for every 1 second.
 // const timer = setInterval(myTimer, 1000);
@@ -67,7 +67,7 @@ document.addEventListener('keyup', (e) => {
 
 
 // S-I function to render bar and gap continuously
-setInterval(function(){
+let bars = setInterval(function(){
     var lastBar = document.getElementById('bar' + (tracker - 1))
     var lastGap = document.getElementById('gap' + (tracker - 1))
     if (tracker > 0) {
@@ -91,13 +91,45 @@ setInterval(function(){
         // append the bar and gap within the gamebox div 
         gameBox.appendChild(bar)
         gameBox.appendChild(gap)
-        currentBar.push(tracker)
+        currentBars.push(tracker)
         tracker++
     }
-    // for (let i = 0; i < currentBar.len)
     
+    var ballTop = parseInt(window.getComputedStyle(ball).getPropertyValue('top'))
+    var ballLeft = parseInt(window.getComputedStyle(ball).getPropertyValue('left'))
+    let drop = 0
+    if (ballTop <= 0) {
+        alert("Game over! Score:" + (tracker-9))
+        clearInterval(bars)
+        location.reload()
+    }
+    // need to render the bars upward to the div gamebox 
+    for (var i = 0; i < currentBars.length; i++) {
+        let current = currentBars[i]
+        let ibar = document.getElementById('bar' + current)
+        let igap = document.getElementById('gap' + current)
+        let ibarTop = parseFloat(window.getComputedStyle(ibar).getPropertyValue('top'))
+        let igapLeft = parseFloat(window.getComputedStyle(igap).getPropertyValue('left'))
+        ibar.style.top = ibarTop - 0.5 + 'px';
+        igap.style.top = ibarTop - 0.5 + 'px';
+        if (ibarTop < -20) {
+            currentBars.shift();
+            ibar.remove();
+            igap.remove();
+        }
+        if (ibarTop - 20 < ballTop && ibarTop > ballTop) {
+            drop++;
+            if (igapLeft <= ballLeft && igapLeft + 20 >= ballLeft) {
+                drop = 0;
+            }
+        }
+    }
+    if (drop == 0) {
+        if (ballTop < 480) {
+            ball.style.top = ballTop + 2 + 'px'
+        }
+    } else {
+        ball.style.top = ballTop - 0.5 + 'px'
+    }
 },1)
-
-
-
 
