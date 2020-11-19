@@ -10,6 +10,7 @@ let control;
 let bothKeys = 0
 // keeps track setInterval function
 var tracker = 0
+var currentBar = []
 
 // set my Interval for myTimer function for every 1 second.
 // const timer = setInterval(myTimer, 1000);
@@ -73,23 +74,28 @@ setInterval(function(){
         var topBar = parseInt(window.getComputedStyle(lastBar).getPropertyValue('top'))
         var topGap = parseInt(window.getComputedStyle(lastGap).getPropertyValue('top'))
     }
-    // create an element div for bar and gap
-    let bar = document.createElement("div")
-    let gap = document.createElement("div")
-    // S-A for class and id for bar and gap
-    bar.setAttribute('class', 'bar')
-    gap.setAttribute('class', 'gap')
-    bar.setAttribute('id', 'bar' + tracker)
-    gap.setAttribute('id', 'gap' + tracker)
-    bar.style.top = topBar + 100 + 'px'
-    gap.style.top = topGap + 100 + 'px'
-    // random the gap everytime it's rendering on the page
-    let random = Math.floor(Math.random() * 360) 
-    gap.style.left = random + 'px'
-    // append the bar and gap within the gamebox div 
-    gameBox.appendChild(bar)
-    gameBox.appendChild(gap)
-    tracker++
+    if (topBar < 400 || tracker == 0) {
+        // create an element div for bar and gap
+        let bar = document.createElement("div")
+        let gap = document.createElement("div")
+        // S-A for class and id for bar and gap
+        bar.setAttribute('class', 'bar')
+        gap.setAttribute('class', 'gap')
+        bar.setAttribute('id', 'bar' + tracker)
+        gap.setAttribute('id', 'gap' + tracker)
+        bar.style.top = topBar + 100 + 'px'
+        gap.style.top = topGap + 100 + 'px'
+        // random the gap everytime it's rendering on the page
+        let random = Math.floor(Math.random() * 360) 
+        gap.style.left = random + 'px'
+        // append the bar and gap within the gamebox div 
+        gameBox.appendChild(bar)
+        gameBox.appendChild(gap)
+        currentBar.push(tracker)
+        tracker++
+    }
+    // for (let i = 0; i < currentBar.len)
+    
 },1)
 
 
