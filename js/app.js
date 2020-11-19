@@ -8,9 +8,8 @@ const ball = document.getElementById('ball')
 const gameBox = document.getElementById('gamebox')
 let control;
 let bothKeys = 0
-// keep track of the setInterval function 
-const tracker = 0
-
+// keeps track setInterval function
+var tracker = 0
 
 // set my Interval for myTimer function for every 1 second.
 // const timer = setInterval(myTimer, 1000);
@@ -65,8 +64,15 @@ document.addEventListener('keyup', (e) => {
 
 // need to create an element div for the bar to render on the page. Within the bar there should be gaps as well
 
+
 // S-I function to render bar and gap continuously
 setInterval(function(){
+    var lastBar = document.getElementById('bar' + (tracker - 1))
+    var lastGap = document.getElementById('gap' + (tracker - 1))
+    if (tracker > 0) {
+        var topBar = parseInt(window.getComputedStyle(lastBar).getPropertyValue('top'))
+        var topGap = parseInt(window.getComputedStyle(lastGap).getPropertyValue('top'))
+    }
     // create an element div for bar and gap
     let bar = document.createElement("div")
     let gap = document.createElement("div")
@@ -75,8 +81,10 @@ setInterval(function(){
     gap.setAttribute('class', 'gap')
     bar.setAttribute('id', 'bar' + tracker)
     gap.setAttribute('id', 'gap' + tracker)
-    // everytime it renders on the page randomly 
-    let random = Math.floor(Math.random() * 360)
+    bar.style.top = topBar + 100 + 'px'
+    gap.style.top = topGap + 100 + 'px'
+    // random the gap everytime it's rendering on the page
+    let random = Math.floor(Math.random() * 360) 
     gap.style.left = random + 'px'
     // append the bar and gap within the gamebox div 
     gameBox.appendChild(bar)
