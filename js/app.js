@@ -101,8 +101,8 @@ let bars = setInterval(function(){
     let drop = 0
     if (ballTop <= 0) {
         // alert("Game over! Score:" + (tracker-9))
-        message.innerHTML = `Game Over! Score: ${tracker-9} `
-        clearInterval(bar)
+        message.innerHTML = `GAME OVER! ${tracker-9} `
+        clearInterval(bars)
         // location.reload()
     }
     // need to render the bars upward to the div gamebox 
