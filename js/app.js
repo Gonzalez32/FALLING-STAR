@@ -7,6 +7,7 @@
 const ball = document.getElementById('ball')
 const gameBox = document.getElementById('gamebox')
 const message = document.getElementById('message')
+const play = document.getElementById('amazing')
 let control;
 let bothKeys = 0
 // keeps track setInterval function
@@ -14,13 +15,13 @@ var tracker = 0
 var currentBars = []
 
 // set my Interval for myTimer function for every 1 second.
-// const timer = setInterval(myTimer, 1000);
+const timer = setInterval(myWatch, 1000);
 // this is my time fucntion that renders on the page for the user. 
-// function myTimer() {
-//     let d = new Date()
-//     let t = d.toLocaleTimeString()
-//     document.getElementById('time').innerHTML = t
-// }
+function myWatch() {
+    let d = new Date()
+    let t = d.toLocaleTimeString()
+    document.getElementById('time').innerHTML = t
+}
 
 // this allows me to see which key is bring selective with console.log ---just for testing---
 // window.addEventListener('keydown', (e) => {
@@ -64,13 +65,15 @@ document.addEventListener('keyup', (e) => {
     bothKeys=0
 })
 
-document.getElementById('resetBtn').addEventListener('click', init)
+// resetBtn = document.getElementById('resetBtn').addEventListener('click', (e) => {
+//     console.log(e.target, e.value)
+//     // tracker = null
+//     // play = null 
 
-// init()
-
-function init() {
-    // console.log('DDGF')
-    
+// })
+// hard reset button at the moment
+function resetButton() {
+    location.reload()
 }
 // need to create an element div for the bar to render on the page. Within the bar there should be gaps as well
 
@@ -108,10 +111,8 @@ let bars = setInterval(function(){
     var ballLeft = parseInt(window.getComputedStyle(ball).getPropertyValue('left'))
     let drop = 0
     if (ballTop <= 0) {
-        // alert("Game over! Score:" + (tracker-9))
-        message.innerHTML = `GAME OVER SCORE: ${tracker-9} `
+        message.innerHTML = `GAME OVER SCORE: ${tracker-9}`
         clearInterval(bars)
-        // location.reload()
     }
     // need to render the bars upward to the div gamebox 
     for (var i = 0; i < currentBars.length; i++) {
