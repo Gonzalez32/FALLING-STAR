@@ -64,6 +64,14 @@ document.addEventListener('keyup', (e) => {
     bothKeys=0
 })
 
+document.getElementById('resetBtn').addEventListener('click', init)
+
+// init()
+
+function init() {
+    // console.log('DDGF')
+    
+}
 // need to create an element div for the bar to render on the page. Within the bar there should be gaps as well
 
 
@@ -101,7 +109,7 @@ let bars = setInterval(function(){
     let drop = 0
     if (ballTop <= 0) {
         // alert("Game over! Score:" + (tracker-9))
-        message.innerHTML = `GAME OVER! ${tracker-9} `
+        message.innerHTML = `GAME OVER SCORE: ${tracker-9} `
         clearInterval(bars)
         // location.reload()
     }
