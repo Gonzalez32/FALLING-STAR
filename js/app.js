@@ -6,6 +6,7 @@
 // first get the element by id and then create an E-L 
 const ball = document.getElementById('ball')
 const gameBox = document.getElementById('gamebox')
+const message = document.getElementById('message')
 let control;
 let bothKeys = 0
 // keeps track setInterval function
@@ -99,9 +100,10 @@ let bars = setInterval(function(){
     var ballLeft = parseInt(window.getComputedStyle(ball).getPropertyValue('left'))
     let drop = 0
     if (ballTop <= 0) {
-        alert("Game over! Score:" + (tracker-9))
-        clearInterval(bars)
-        location.reload()
+        // alert("Game over! Score:" + (tracker-9))
+        message.innerHTML = `Game Over! Score: ${tracker-9} `
+        clearInterval(bar)
+        // location.reload()
     }
     // need to render the bars upward to the div gamebox 
     for (var i = 0; i < currentBars.length; i++) {
