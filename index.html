@@ -10,14 +10,26 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Force Ball</h1>
-    <h2 id="message">READY GO!</h2>
-    <div id="time"></div>
+    <h1 class="nes-text is-primary">Force Ball</h1>
+    <span>
+        <h2 class="nes-text is-error" id="message">READY GO!</h2>
+    </span>
+    <header>
+        <div id="time"></div>
+    </header>
     
         <div id="gamebox">
             <div id="ball"></div>
         </div>
-        <div class="nes-container is-rounded is-dark" id="words">Use left key & right key</div>
+
+        <section class="message -right">
+            <!-- Balloon -->
+            <div class="nes-balloon from-right">
+              <p id="words">Use Left Key & Right Key!</p>
+            </div>
+            <i class="nes-bcrikko"></i>
+          </section>
+
         <div id="button">
             <button type="button" class="nes-btn is-error" onclick="resetButton()">Reset</button>
         </div>
