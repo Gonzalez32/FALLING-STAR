@@ -82,4 +82,19 @@ i.nes-bcrikko {
     text-align: center;
 }
 
+/* @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    body {
+       font-size: 2rem;
+       
+    }
+} */
 
+@media only screen and (max-width: 400px) and (max-height: 600px) {
+    body {
+        font-size: 2rem;
+        /* font-size: 20px; */
+        width: min-content;
+        height: min-content;
+        justify-content: center;
+    }
+}
