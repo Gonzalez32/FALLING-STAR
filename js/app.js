@@ -61,7 +61,7 @@ function left() {
 // within setInterval function right for my right-key set to 380 at the right div-box
 function right() {
     let left = parseInt(window.getComputedStyle(ball).getPropertyValue("left"))
-    if (left < 380) {
+    if (left < 360) {
         ball.style.left = left + 2 + 'px'
     }
 }
