@@ -1,4 +1,11 @@
-// user story: move the ball threw the gaps within the blocks as they go upwards.
+// user story:
+// move the ball using left key and right key threw the gaps within the bars as they go upwards.
+// random Bars with Gaps will render as you keep playing.
+// once the ball hits the top bar DIV it stops the game.
+// render Game-Over with score to the user.
+// user will be able to 'click' Reset button to play again. 
+// real Time will render to the user as they play.
+
 /*-------------------------------- Constants --------------------------------*/
 const timer = setInterval(myWatch, 1000)
 
@@ -59,8 +66,7 @@ function right() {
     }
 }
 
-// need to create an element div for the bar to render on the page. Within the bar there should be gaps as well
-
+// need to create an element div for the bar to render on the page.
 // S-I function to render bar and gap continuously
 let play = setInterval(function() {
     var lastBar = document.getElementById('bar' + (tracker - 1))
@@ -113,7 +119,7 @@ let play = setInterval(function() {
             igap.remove()
         }
         if (ibarTop - 20 < ballTop && ibarTop > ballTop) {
-            drop++;
+            drop++
             if (igapLeft <= ballLeft && igapLeft + 20 >= ballLeft) {
                 drop = 0
             }
