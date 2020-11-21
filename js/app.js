@@ -2,8 +2,18 @@
 
 // G-L: create an eventlistener on the key's left & right. Wirte out a function where the ball hit's up they lose/break the game as an error.
 
+/*-------------------------------- Constants --------------------------------*/
 
-// first get the element by id and then create an E-L 
+/*---------------------------- Variables (state) ----------------------------*/
+
+/*------------------------ Cached Element References ------------------------*/
+
+/*----------------------------- Event Listeners -----------------------------*/
+
+/*-------------------------------- Functions --------------------------------*/
+
+// first get the element by id and then create an E-L
+
 const ball = document.getElementById('ball')
 const gameBox = document.getElementById('gamebox')
 const message = document.getElementById('message')
@@ -65,12 +75,6 @@ document.addEventListener('keyup', (e) => {
     bothKeys=0
 })
 
-// resetBtn = document.getElementById('resetBtn').addEventListener('click', (e) => {
-//     console.log(e.target, e.value)
-//     // tracker = null
-//     // play = null 
-
-// })
 // hard reset button at the moment
 function resetButton() {
     location.reload()
