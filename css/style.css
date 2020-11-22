@@ -83,6 +83,10 @@ i.nes-bcrikko {
     text-align: center;
 }
 
+#startBtn {
+    text-align: center;
+}
+
 #button {
     text-align: center;
 }
@@ -94,12 +98,12 @@ i.nes-bcrikko {
     }
 } */
 
-@media only screen and (max-width: 400px) and (max-height: 600px) {
+/* @media only screen and (max-width: 400px) and (max-height: 600px) {
     body {
         font-size: 2rem;
-        /* font-size: 20px; */
+        font-size: 20px;
         width: min-content;
         height: min-content;
         justify-content: center;
     }
-}
+} */

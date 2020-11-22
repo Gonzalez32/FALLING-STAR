@@ -75,7 +75,7 @@ let play = setInterval(function() {
         var topBar = parseInt(window.getComputedStyle(lastBar).getPropertyValue('top'))
         var topGap = parseInt(window.getComputedStyle(lastGap).getPropertyValue('top'))
     }
-    if (topBar < 400 || tracker == 0) {
+    if (topBar < 400 || tracker == 0 ) {
         // create an element div for bar and gap
         let bar = document.createElement("div")
         let gap = document.createElement("div")
@@ -105,14 +105,15 @@ let play = setInterval(function() {
         clearInterval(play)
     }
     // need to render the bars upward to the div gamebox 
-    for (var i = 0; i < currentBars.length; i++) {
+    for (let i = 0; i < currentBars.length; i++) {
         let current = currentBars[i]
         let ibar = document.getElementById('bar' + current)
         let igap = document.getElementById('gap' + current)
         let ibarTop = parseFloat(window.getComputedStyle(ibar).getPropertyValue('top'))
         let igapLeft = parseFloat(window.getComputedStyle(igap).getPropertyValue('left'))
-        ibar.style.top = ibarTop - 0.5 + 'px'
-        igap.style.top = ibarTop - 0.5 + 'px'
+        // render upward pace by px
+        ibar.style.top = ibarTop - 0.6 + 'px'
+        igap.style.top = ibarTop - 0.6 + 'px'
         if (ibarTop < -20) {
             currentBars.shift()
             ibar.remove()
