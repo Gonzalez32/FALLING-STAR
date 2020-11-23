@@ -1,6 +1,8 @@
 # Force-Ball-Game
 
 ![Imgur](https://i.imgur.com/o1Q8HdV.png)
+## Falling Star
+![Imgur](https://i.imgur.com/SlLC9TN.png)
 ## Technologies Used:
 ![motherofgod](https://mdn.mozillademos.org/files/13502/cake.png)
 __**JavaScript**__- 
