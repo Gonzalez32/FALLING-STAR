@@ -12,10 +12,10 @@ __**JavaScript**__-
 __**HTML**__- 
 __**CSS**__-
 
-# [PlayGame](http://w-oatmeal.surge.sh/) FALLING STAR
+# [PlayGame](http://w-oatmeal.surge.sh/) ⭐️-FALLING STAR-⭐️ 
 
 **Getting Started:** User objective is to use left key & right key to move Star threw the gaps within the bars, as they continue to render **upward**! If the Star is up top and hit's the upper bar you **LOSE!**
-Score: will render on the page. 
+Score: will render on the page. User can hit the **Reset** button to play again if they choose so.
 
 ## Icebox
 * Render the bar quicker as you go **down**
@@ -25,7 +25,7 @@ Score: will render on the page.
 * User can change ICON?
 
 
-## Links For Project
+## Links For Project-Setup
 
-[NES.css](https://nostalgic-css.github.io/NES.css/)
-[freesound](https://freesound.org/)
+* [NES.css](https://nostalgic-css.github.io/NES.css/)
+* [freesound](https://freesound.org/)
