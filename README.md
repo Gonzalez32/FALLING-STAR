@@ -1,7 +1,8 @@
 # Force-Ball-Game
-
+This was my wirefame coming into the project week.
 ![Imgur](https://i.imgur.com/o1Q8HdV.png)
 ## Falling Star
+This was my Final Outlook for the project.
 ![Imgur](https://i.imgur.com/SlLC9TN.png)
 ## Technologies Used:
 ![motherofgod](https://mdn.mozillademos.org/files/13502/cake.png)
