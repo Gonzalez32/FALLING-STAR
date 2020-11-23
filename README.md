@@ -22,7 +22,7 @@ Score: will render on the page. User can hit the **Reset** button to play again 
 * Background Music 
 * Keep High-Score on the left or right side
 * User has an option to start the game
-* User can change ICON?
+* User can change ICON
 
 
 ## Links For Project-Setup
