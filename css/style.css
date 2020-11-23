@@ -8,13 +8,8 @@ html, body, pre, code, kbd, samp {
 }
 
 body {
-    /* background-image: linear-gradient(to bottom, #61083b, #60144b, #5b205c, #522b6b, #433679, #3a498e, #2a5ba1, #006eb2, #008ecb, #00aed9, #00cddf, #16ebdd); */
-    /* background:url('https://media.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.gif') ; */
-    /* background:url('https://media.giphy.com/media/26AHqZycSplGWWPAI/giphy.gif'); */
-    /* background:url('https://media.giphy.com/media/j4k8DOFYOnUenLrIWM/giphy.gif'); */
     background:url('https://i1.wp.com/windowscustomization.com/wp-content/uploads/2018/12/Galaxy-4K.gif?fit=1000%2C356&quality=80&strip=all&ssl=1&w=640');
     background-size: cover;
-    /* background-size: 500px 500px; */
     height: 100vh;
 }
 
@@ -52,8 +47,6 @@ body {
 .gap {
     width: 45px;
     height: 20px;
-    /* background-color: transparent; */
-    /* background-color: rgb(255, 255, 255); */
     background:url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif');
     position: relative;
     top: 100px;

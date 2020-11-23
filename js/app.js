@@ -23,10 +23,6 @@ const gameBox = document.getElementById('gamebox')
 const message = document.getElementById('message')
 
 /*----------------------------- Event Listeners -----------------------------*/
-// this allows me to see which key is bring selective with console.log ---just for testing---
-// window.addEventListener('keydown', (e) => {
-    //     console.log(e)
-// })
 
 // E-L on keybored but only when user is pressing left arrow or right arrow
 document.addEventListener('keydown', (e) => {
