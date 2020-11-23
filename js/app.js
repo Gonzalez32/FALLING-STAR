@@ -104,7 +104,7 @@ let play = setInterval(function() {
         message.innerHTML = `GAME OVER SCORE: ${tracker-9}`
         clearInterval(play)
     }
-    // need to render the bars upward to the div gamebox 
+    // need to render the bars upward to the div gamebox with forloop
     for (let i = 0; i < currentBars.length; i++) {
         let current = currentBars[i]
         let ibar = document.getElementById('bar' + current)
@@ -119,6 +119,7 @@ let play = setInterval(function() {
             ibar.remove()
             igap.remove()
         }
+        // ball is on top then drop back to 0 
         if (ibarTop - 20 < ballTop && ibarTop > ballTop) {
             drop++
             if (igapLeft <= ballLeft && igapLeft + 20 >= ballLeft) {
@@ -126,7 +127,9 @@ let play = setInterval(function() {
             }
         }
     }
+    // if drop = 0 then it drops if not then it goes upward
     if (drop == 0) {
+        // this prevents the ball to drop downward
         if (ballTop < 480) {
             ball.style.top = ballTop + 2 + 'px'
         }
