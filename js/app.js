@@ -15,7 +15,8 @@ let bothKeys = 0
 // keeps track setInterval function
 var tracker = 0
 var currentBars = []
-
+let starAudio = new Audio('audio/beep.mp3')
+let gameOverAudio = new Audio('audio/gameover.mp3')
 /*------------------------ Cached Element References ------------------------*/
 const ball = document.getElementById('ball')
 const gameBox = document.getElementById('gamebox')
@@ -33,10 +34,12 @@ document.addEventListener('keydown', (e) => {
         bothKeys++
         // use keyCode: 37 = ArrowLeft
         if (e.keyCode === 37) {
+            starAudio.play()
             control = setInterval(left, 1)
         }
         // use keyCode: 39 = ArrowRight
         if (e.keyCode === 39) {
+            starAudio.play()
             control = setInterval(right, 1)
         }
     }
@@ -101,6 +104,7 @@ let play = setInterval(function() {
     
     let drop = 0
     if (ballTop <= 0) {
+        gameOverAudio.play()
         message.innerHTML = `GAME OVER SCORE: ${tracker-9}`
         clearInterval(play)
     }
