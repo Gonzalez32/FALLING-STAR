@@ -8,9 +8,7 @@ This was my Final Outlook for the project.
 ![Imgur](https://i.imgur.com/SlLC9TN.png)
 ## Technologies Used:
 ![motherofgod](https://mdn.mozillademos.org/files/13502/cake.png)
-__**JavaScript**__- 
-__**HTML**__- 
-__**CSS**__-
+
 
 # [PlayGame](http://w-oatmeal.surge.sh/) ⭐️-FALLING STAR-⭐️ 
 
