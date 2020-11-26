@@ -1,4 +1,4 @@
-# Force-Ball-Game
+# FALLING-STAR
 
 This was my wirefame coming into the project week.
 ![Imgur](https://i.imgur.com/o1Q8HdV.png)
